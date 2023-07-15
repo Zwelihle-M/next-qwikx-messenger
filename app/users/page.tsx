@@ -1,14 +1,9 @@
-"use client"
-
-import { signOut } from "next-auth/react";
+import EmptyScreen from "../components/EmptyScreen";
 
 const Users = () => {
   return (
     <div className="hidden lg:block lg:pl-80 h-full bg-graySeven text-white">
-    
-  <button onClick={() => signOut()}>
-Logout
-  </button>
+      <EmptyScreen />
     </div>
   );
 };

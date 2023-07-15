@@ -11,7 +11,7 @@ export default function Home() {
           src={QwikxLogo}
           alt="Logo"
           height={100}
-          width={100}
+          width={200}
           className="mx-auto w-auto"
           quality={100}
           priority
