@@ -59,6 +59,21 @@ export async function POST(request: Request, { params }: { params: IParams }) {
       },
     });
 
+    await pusherServer.trigger(currentUser.email, "conversation:update", {
+      id: currentUser.id,
+      messages: [updatedMessage],
+    });
+
+    if (lastMessage.seenIds.indexOf(currentUser.id) !== -1) {
+      return NextResponse.json(conversation);
+    }
+
+    await pusherServer.trigger(
+      conversationId!,
+      "message:update",
+      updatedMessage
+    );
+
     return NextResponse.json(updatedMessage);
   } catch (error: any) {
     console.log(error, "Error messages seen");
