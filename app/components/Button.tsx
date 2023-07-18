@@ -45,7 +45,7 @@ const Button: React.FC<ButtonProps> = ({
           "bg-rose-500 hover:bg-rose-600 focus-visible:outline-rose-600",
         !secondary &&
           !danger &&
-          "bg-primaryPurple hover:bg-primaryViolet focus-visible:outline-primaryPurple"
+          "bg-gradient-to-r from-primaryPurple to-primaryViolet  hover:bg-primaryViolet focus-visible:outline-primaryPurple"
       )}
     >
       {children}

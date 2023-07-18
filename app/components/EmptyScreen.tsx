@@ -15,7 +15,7 @@ const EmptyScreen = () => {
           quality={100}
           priority
         />
-        <h2 className="mt-2 text-4xl text-white font-thin">
+        <h2 className="mt-2 text-4xl text-white">
           Select a chat or start a new converstation
         </h2>
       </div>
